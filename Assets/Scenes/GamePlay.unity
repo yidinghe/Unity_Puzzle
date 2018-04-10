@@ -457,6 +457,8 @@ GameObject:
   - component: {fileID: 272823080}
   - component: {fileID: 272823082}
   - component: {fileID: 272823081}
+  - component: {fileID: 272823083}
+  - component: {fileID: 272823084}
   m_Layer: 5
   m_Name: Select Puzzle Menu Buttons
   m_TagString: Untagged
@@ -519,6 +521,34 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 272823079}
+--- !u!225 &272823083
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 272823079}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!95 &272823084
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 272823079}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 532102a97edf1428c8c338dc3cd8223f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &387094155
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +849,8 @@ GameObject:
   - component: {fileID: 593723832}
   - component: {fileID: 593723834}
   - component: {fileID: 593723833}
+  - component: {fileID: 593723836}
+  - component: {fileID: 593723835}
   m_Layer: 5
   m_Name: Setting Panel
   m_TagString: Untagged
@@ -844,7 +876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -388.3}
+  m_AnchoredPosition: {x: 0, y: -844.9878}
   m_SizeDelta: {x: 0, y: -776.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &593723833
@@ -880,6 +912,34 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 593723831}
+--- !u!95 &593723835
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 593723831}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a697f1785bd3844e394e2c4942b2a51d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!225 &593723836
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 593723831}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &656672935
 GameObject:
   m_ObjectHideFlags: 0
