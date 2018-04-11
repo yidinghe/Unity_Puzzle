@@ -142,7 +142,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 593723831}
+  puzzleLevelSelectPanel: {fileID: 0}
   settingsPanelAnim: {fileID: 593723835}
+  puzzleLevelSelectAnim: {fileID: 0}
 --- !u!114 &2425443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +157,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectPuzzleMenuPanel: {fileID: 0}
+  puzzleLevelSelectPanel: {fileID: 0}
   selectPuzzleMenuAnim: {fileID: 0}
+  puzzleLevelSelectAnim: {fileID: 0}
 --- !u!4 &2425444
 Transform:
   m_ObjectHideFlags: 0
@@ -4610,6 +4614,8 @@ GameObject:
   - component: {fileID: 1935184492}
   - component: {fileID: 1935184494}
   - component: {fileID: 1935184493}
+  - component: {fileID: 1935184496}
+  - component: {fileID: 1935184495}
   m_Layer: 5
   m_Name: Puzzle Level Select Menu Panel
   m_TagString: Untagged
@@ -4638,7 +4644,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -2327, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1935184493
@@ -4674,6 +4680,34 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1935184491}
+--- !u!95 &1935184495
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935184491}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8e6a633249b124b8ab4791b41a89ef04, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!225 &1935184496
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935184491}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1980321723
 GameObject:
   m_ObjectHideFlags: 0
