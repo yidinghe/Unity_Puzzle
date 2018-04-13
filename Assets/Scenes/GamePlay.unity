@@ -2376,7 +2376,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 731531649}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1229662434}
+        m_MethodName: SelectPuzzleLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &731531649
@@ -2541,6 +2552,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 885587055}
+  - component: {fileID: 885587056}
   m_Layer: 0
   m_Name: PuzzleGameController
   m_TagString: Untagged
@@ -2561,6 +2573,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &885587056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885587054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d03866bc584314ea7babb895616f4f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleLevelSelectPanel: {fileID: 1935184491}
+  puzzleLevelSelectAnim: {fileID: 1935184495}
+  puzzleGamePanel1: {fileID: 1454865151}
+  puzzleGamePanel2: {fileID: 150173074}
+  puzzleGamePanel3: {fileID: 1030476129}
+  puzzleGamePanel4: {fileID: 480998562}
+  puzzleGamePanel5: {fileID: 2070814590}
+  puzzleGamePanelAnim1: {fileID: 1454865156}
+  puzzleGamePanelAnim2: {fileID: 150173079}
+  puzzleGamePanelAnim3: {fileID: 1030476134}
+  puzzleGamePanelAnim4: {fileID: 480998567}
+  puzzleGamePanelAnim5: {fileID: 2070814595}
 --- !u!1 &889614789
 GameObject:
   m_ObjectHideFlags: 0
@@ -3126,7 +3161,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1012673921}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 885587056}
+        m_MethodName: BackToPuzzleLevelSelectMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1012673921
@@ -3405,7 +3451,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1032498062}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 885587056}
+        m_MethodName: BackToPuzzleLevelSelectMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1032498062
@@ -3623,7 +3680,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1117137980}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1229662434}
+        m_MethodName: SelectPuzzleLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1117137980
@@ -3734,7 +3802,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1172225307}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 885587056}
+        m_MethodName: BackToPuzzleLevelSelectMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1172225307
@@ -3797,7 +3876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefdc3293ce014431b3b6ac0f089dc0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadPuzzleGame: {fileID: 0}
+  loadPuzzleGame: {fileID: 885587056}
   selectPuzzleMenuPanel: {fileID: 272823079}
   puzzleLevelSelectPanel: {fileID: 1935184491}
   selectPuzzleMenuAnim: {fileID: 272823084}
@@ -3891,7 +3970,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1264494381}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1229662434}
+        m_MethodName: SelectPuzzleLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1264494381
@@ -4987,7 +5077,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1565604118}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 885587056}
+        m_MethodName: BackToPuzzleLevelSelectMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1565604118
@@ -5618,7 +5719,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1696976993}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1229662434}
+        m_MethodName: SelectPuzzleLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1696976993
@@ -5900,7 +6012,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1777387515}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 885587056}
+        m_MethodName: BackToPuzzleLevelSelectMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1777387515
@@ -6755,7 +6878,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2062312562}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1229662434}
+        m_MethodName: SelectPuzzleLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2062312562
