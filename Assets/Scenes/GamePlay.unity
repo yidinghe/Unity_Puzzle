@@ -2553,6 +2553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 885587055}
   - component: {fileID: 885587056}
+  - component: {fileID: 885587057}
   m_Layer: 0
   m_Name: PuzzleGameController
   m_TagString: Untagged
@@ -2596,6 +2597,19 @@ MonoBehaviour:
   puzzleGamePanelAnim3: {fileID: 1030476134}
   puzzleGamePanelAnim4: {fileID: 480998567}
   puzzleGamePanelAnim5: {fileID: 2070814595}
+--- !u!114 &885587057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885587054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7a47945471b4e9899c6124d1f02ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleButton: {fileID: 114371674592017054, guid: ac0e7d7f3e4c24fd2ac93ea548696413,
+    type: 2}
 --- !u!1 &889614789
 GameObject:
   m_ObjectHideFlags: 0
