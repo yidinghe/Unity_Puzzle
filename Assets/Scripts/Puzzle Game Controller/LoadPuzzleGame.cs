@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LoadPuzzleGame : MonoBehaviour
 {
+	[SerializeField]
+	private LayoutPuzzleButtons layoutPuzzleButtons;
 
 	[SerializeField]
 	private GameObject puzzleLevelSelectPanel;
@@ -25,6 +27,8 @@ public class LoadPuzzleGame : MonoBehaviour
 	{
 		this.puzzleLevel = level;
 		this.selectedPuzzle = puzzle;
+
+		layoutPuzzleButtons.LayoutButtons (level, puzzle);
 
 		switch (puzzleLevel) {
 		case 0:

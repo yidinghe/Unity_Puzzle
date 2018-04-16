@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class CreatePuzzleButtonsAndAnimations : MonoBehaviour
 {
+	[SerializeField]
+	private LayoutPuzzleButtons layoutPuzzleButtons;
 
 	[SerializeField]
 	private Button puzzleButton;
@@ -36,7 +38,22 @@ public class CreatePuzzleButtonsAndAnimations : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		
+		AssignButtonsAndAnimators ();
+	}
+
+	void AssignButtonsAndAnimators ()
+	{
+		layoutPuzzleButtons.level1Buttons = level1Buttons;
+		layoutPuzzleButtons.level2Buttons = level2Buttons;
+		layoutPuzzleButtons.level3Buttons = level3Buttons;
+		layoutPuzzleButtons.level4Buttons = level4Buttons;
+		layoutPuzzleButtons.level5Buttons = level5Buttons;
+
+		layoutPuzzleButtons.level1Anims = level1Anims;
+		layoutPuzzleButtons.level2Anims = level2Anims;
+		layoutPuzzleButtons.level3Anims = level3Anims;
+		layoutPuzzleButtons.level4Anims = level4Anims;
+		layoutPuzzleButtons.level5Anims = level5Anims;
 	}
 
 
