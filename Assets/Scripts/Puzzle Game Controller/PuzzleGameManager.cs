@@ -19,7 +19,23 @@ public class PuzzleGameManager : MonoBehaviour
 
 	public void PickAPuzzle ()
 	{
-		Debug.Log ("Selected Button: " + UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+		//Debug.Log ("Selected Button: " + UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+		int index = int.Parse (UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+		StartCoroutine (TurnPuzzleButtonUp (puzzleButtonsAnimators [index], puzzleButtons [index], gamePuzzleSprites [index]));
+	}
+
+	IEnumerator TurnPuzzleButtonUp (Animator anim, Button btn, Sprite puzzleImage)
+	{
+		anim.Play ("TurnUp");
+		yield return new WaitForSeconds (.4f);
+		btn.image.sprite = puzzleImage;
+	}
+
+	IEnumerator TurnPuzzleButtonBack (Animator anim, Button btn, Sprite puzzleImage)
+	{
+		anim.Play ("TurnBack");
+		yield return new WaitForSeconds (.4f);
+		btn.image.sprite = puzzleImage;
 	}
 
 	void AddListeners ()
