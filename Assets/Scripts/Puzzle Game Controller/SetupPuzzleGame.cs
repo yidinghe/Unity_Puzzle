@@ -5,7 +5,11 @@ using UnityEngine.UI;
 
 public class SetupPuzzleGame : MonoBehaviour
 {
+	[SerializeField]
+	private PuzzleGameManager puzzleGameManager;
+
 	private Sprite[] candyPuzzleSprites, transportPuzzleSprites, fruitPuzzleSprites;
+
 	[SerializeField]
 	private List<Sprite> gamePuzzles = new List<Sprite> ();
 
@@ -82,12 +86,15 @@ public class SetupPuzzleGame : MonoBehaviour
 		this.level = level;
 		this.selectedPuzzle = selectedPuzzle;
 		PrepareGameSprites ();
+		puzzleGameManager.SetGamePuzzleSprites (gamePuzzles);
 	}
 
 	public void SetPuzzleButtonsAndAnimators (List<Button> puzzleButtons, List<Animator> puzzleButtonsAnimators)
 	{
 		this.puzzleButtons = puzzleButtons;
 		this.puzzleButtonsAnimators = puzzleButtonsAnimators;
+
+		puzzleGameManager.SetUpButtonsAndAnimators (puzzleButtons, puzzleButtonsAnimators);
 	}
 
 }
