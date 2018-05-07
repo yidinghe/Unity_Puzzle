@@ -23,6 +23,11 @@ public class PuzzleGameManager : MonoBehaviour
 	private int firstGuessIndex, secondGuessIndex;
 	private string firstGuessPuzzle, secondGuessPuzzle;
 
+	private int countTryGuess;
+
+	private int countCorrectGuess;
+	private int gameGuess;
+
 
 	public void PickAPuzzle ()
 	{
@@ -36,9 +41,8 @@ public class PuzzleGameManager : MonoBehaviour
 			secondGuessIndex = int.Parse (UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
 			secondGuessPuzzle = gamePuzzleSprites [secondGuessIndex].name;
 			StartCoroutine (TurnPuzzleButtonUp (puzzleButtonsAnimators [secondGuessIndex], puzzleButtons [secondGuessIndex], gamePuzzleSprites [secondGuessIndex]));
-			Debug.Log ("firstGuessPuzzle: " + firstGuessPuzzle);
-			Debug.Log ("secondGuessPuzzle: " + secondGuessPuzzle);
 			StartCoroutine (CheckPuzzleMatch (puzzleBackgroundImage));
+			countTryGuess++;
 		}
 	}
 
@@ -49,6 +53,7 @@ public class PuzzleGameManager : MonoBehaviour
 		if (firstGuessPuzzle == secondGuessPuzzle) {
 			puzzleButtonsAnimators [firstGuessIndex].Play ("FadeOut");
 			puzzleButtonsAnimators [secondGuessIndex].Play ("FadeOut");
+			CheckIfTheGameIsFinished ();
 		} else {
 			StartCoroutine (TurnPuzzleButtonBack (puzzleButtonsAnimators [firstGuessIndex], puzzleButtons [firstGuessIndex], puzzleBackgroundImage));
 			StartCoroutine (TurnPuzzleButtonBack (puzzleButtonsAnimators [secondGuessIndex], puzzleButtons [secondGuessIndex], puzzleBackgroundImage));
@@ -57,6 +62,14 @@ public class PuzzleGameManager : MonoBehaviour
 		yield return new WaitForSeconds (.7f);
 
 		firstGuess = secondGuess = false;
+	}
+
+	void CheckIfTheGameIsFinished ()
+	{
+		countCorrectGuess++;
+		if (countCorrectGuess == gameGuess) {
+			Debug.Log ("CheckIfTheGameIsFinished finish");
+		}
 	}
 
 	IEnumerator TurnPuzzleButtonUp (Animator anim, Button btn, Sprite puzzleImage)
@@ -79,10 +92,6 @@ public class PuzzleGameManager : MonoBehaviour
 			btn.onClick.RemoveAllListeners ();
 			btn.onClick.AddListener (() => PickAPuzzle ());
 		}
-
-		foreach (Animator anim in puzzleButtonsAnimators) {
-			anim.Play ("Idle");
-		}
 	}
 
 	public void SetUpButtonsAndAnimators (List<Button> buttons, List<Animator> animators)
@@ -90,6 +99,7 @@ public class PuzzleGameManager : MonoBehaviour
 		this.puzzleButtons = buttons;
 		this.puzzleButtonsAnimators = animators;
 
+		gameGuess = puzzleButtons.Count / 2;
 		puzzleBackgroundImage = puzzleButtons [0].image.sprite;
 
 		AddListeners ();
