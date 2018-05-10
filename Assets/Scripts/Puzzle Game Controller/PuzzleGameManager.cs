@@ -28,6 +28,9 @@ public class PuzzleGameManager : MonoBehaviour
 	private int countCorrectGuess;
 	private int gameGuess;
 
+	[SerializeField]
+	private GameFinished gameFinished;
+
 
 	public void PickAPuzzle ()
 	{
@@ -68,8 +71,47 @@ public class PuzzleGameManager : MonoBehaviour
 	{
 		countCorrectGuess++;
 		if (countCorrectGuess == gameGuess) {
-			Debug.Log ("CheckIfTheGameIsFinished finish");
+			CheckHowManyGuesses ();
 		}
+	}
+
+	void CheckHowManyGuesses ()
+	{
+		int howManGuesses = 0;
+		switch (level) {
+		case 0:
+			howManGuesses = 5;
+			break;
+		case 1:
+			howManGuesses = 10;
+			break;
+		case 2:
+			howManGuesses = 15;
+			break;
+		case 3:
+			howManGuesses = 20;
+			break;
+		case 4:
+			howManGuesses = 25;
+			break;
+		}
+
+		if (countTryGuess < howManGuesses) {
+			gameFinished.ShowGameFinishedPanel (3);		
+		} else if (countTryGuess < (howManGuesses + 5)) {
+			gameFinished.ShowGameFinishedPanel (2);
+		} else {
+			gameFinished.ShowGameFinishedPanel (1);
+		}
+	}
+
+	public List<Animator> ResetGameplay() {
+		gameFinished.HideGameFinishedPanel ();
+		firstGuess = secondGuess = false;
+		countTryGuess = 0;
+		countCorrectGuess = 0;
+
+		return puzzleButtonsAnimators;
 	}
 
 	IEnumerator TurnPuzzleButtonUp (Animator anim, Button btn, Sprite puzzleImage)

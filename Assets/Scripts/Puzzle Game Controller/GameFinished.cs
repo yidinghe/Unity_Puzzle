@@ -12,12 +12,6 @@ public class GameFinished : MonoBehaviour
 	private Animator gameFinishedAnim, star1Anim, star2Anim, star3Anim, textAnim;
 
 
-	void Start ()
-	{
-		ShowGameFinishedPanel (3);
-	}
-
-
 	public void ShowGameFinishedPanel (int stars)
 	{
 		StartCoroutine (ShowPanel (stars));
